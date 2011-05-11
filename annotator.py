@@ -14,11 +14,11 @@ from nltk.corpus import stopwords
 
 # config for NCBO Annotator Web Service
 URL = 'http://rest.bioontology.org/obs/annotator'
-API_KEY = '24e1bd3e-54e0-11e0-9d7b-005056aa3316' # api keys are available at http://bioportal.bioontology.org/
+API_KEY = '' # api keys are available at http://bioportal.bioontology.org/
 STOPWORDS = ','.join([word for word in stopwords.words('english')])
 
 # sample annotation text from pubmed
-Entrez.email = 'bnniii@uw.edu'
+Entrez.email = ''
 handle = Entrez.efetch(db="pubmed",rettype='xml',id='20808702')
 rawHTML = etree.fromstring(handle.read())
 rawXML = etree.fromstring(rawHTML[1][0].text[1:-1])
